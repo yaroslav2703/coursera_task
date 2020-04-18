@@ -34,6 +34,6 @@ def calc_age(uid):
 
 
 if __name__ == '__main__':
-    iud = 'reigning'
+    iud = 'mercylonelymercylonelymercymercy'
     res = calc_age(iud)
     print(res)
