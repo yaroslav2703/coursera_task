@@ -1,5 +1,5 @@
 import re
-from .regexp import calculate
+from regexp.regexp import calculate
 
 
 def findall(regexp):
