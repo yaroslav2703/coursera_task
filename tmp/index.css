@@ -1,0 +1,23 @@
+.empty {
+    height: 20px;
+}
+
+.answer-indents {
+    padding: 5px;
+    margin: 5px;
+}
+
+.tag-indents {
+    padding: 4px;
+    margin: 2px;
+}
+
+.footer {
+    height: 50px;
+}
+
+.rating {
+    padding: 3px;
+    font-size: 20px;
+    text-align: center;
+}

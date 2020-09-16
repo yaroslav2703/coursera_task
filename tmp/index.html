@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AskPupkin</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Stackoverflow</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            </form>
+        </div>
+        <a class="nav-link" href="#">log in</a>
+        <a class="nav-link" href="#">register</a>
+    </nav>
+    <hr/>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img src="https://i.ibb.co/vPSR9gr/leha.jpg" alt="leha" class="img-thumbnail">
+                        <div class="empty"></div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <button type="button" class="btn btn-outline-primary" id="question_good-1"> + </button>
+                            </div>
+                            <div class="col-sm-4 rating" id="buttonCountNumber1">0</div>
+                            <div class="col-sm-4">
+                                <button type="button" class="btn btn-outline-primary" id="question_bad-1"> - </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-9">
+                        <h4 class="text-justify">
+                            Django testing: Got an error creating the test database: database “database_name” already exists
+                        </h4>
+                        <p>
+                            I have a problem with testing. It's my first time writing tests and I have a problem.
+
+                            I just created a test folder inside my app users, and test_urls.py for testing the urls.
+
+                            When I type:
+
+                            python manage.py test users
+
+                            It says:
+
+                            Creating test database for alias 'default'... Got an error creating the test database: database "database_name" already exists
+
+                            Type 'yes' if you would like to try deleting the test database 'database_name', or 'no' to cancel:
+
+                            What does it mean? What happens if I type yes? Do I lose all my data in database?
+                        </p>
+                        <div class="row">
+                            <div class="col-sm-1">
+                                <p>
+                                    <b>Tags:</b>
+                                </p>
+                            </div>
+                            <div class="col-sm-2">
+                                <a class="link" href="#">black-jack</a>
+                            </div>
+                            <div class="col-sm-2">
+                                <a class="link" href="#">bender</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr/>
+                <div class="row border border-secondary answer-indents">
+                    <div class="col-sm-3">
+                        <img src="https://i.ibb.co/gMBDxKS/mir.jpg" alt="mir" class="img-thumbnail">
+                        <div class="empty"></div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <button type="button" class="btn btn-outline-primary" id="answer_good-1"> + </button>
+                            </div>
+                            <div class="col-sm-4 rating" id="buttonCountNumber2">0</div>
+                            <div class="col-sm-4">
+                                <button type="button" class="btn btn-outline-primary" id="answer_bad-1"> - </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-9">
+                        <p>
+                            When testing, Django creates a test database to work on so that your development database is not polluted. The error message says that Django is trying to create a test database named "database_name" and that this database already exists.
+                            You should check the tables of the database software you are using and check what is in database_name, it's probably been created by mistake.
+                            If you type yes, the database database_name will be deleted and it is unlikely that you will be able to recover the data. So try to understand what is going on first.
+                        </p>
+                    </div>
+                </div>
+                <div class="row border border-secondary answer-indents">
+                    <div class="col-sm-3">
+                        <img src="https://i.ibb.co/37NLS2c/denial.jpg" alt="denial" class="img-thumbnail">
+                        <div class="empty"></div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <button type="button" class="btn btn-outline-primary" id="answer_good-2"> + </button>
+                            </div>
+                            <div class="col-sm-4 rating" id="buttonCountNumber3">0</div>
+                            <div class="col-sm-4">
+                                <button type="button" class="btn btn-outline-primary" id="answer_bad-2"> - </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-9">
+                        <p>
+                            The default test database names are created by prepending test_ to the value of each NAME in DATABASES. When using SQLite, the tests will use an in-memory database by default (i.e., the database will be created in memory, bypassing the filesystem entirely!).
+                            The TEST dictionary in DATABASES offers a number of settings to configure your test database. For example, if you want to use a different database name, specify NAME in the TEST dictionary for any given database in DATABASES.
+                        </p>
+                    </div>
+                </div>
+                <hr/>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <form>
+                            <div class="form-group">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-outline-primary">Answer</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h4 class="text-justify">
+                            Popular Tags
+                        </h4>
+                        <button type="button" class="btn btn-light tag-indents">coursera</button>
+                        <button type="button" class="btn btn-light tag-indents">python</button>
+                        <button type="button" class="btn btn-light tag-indents">mysql</button>
+                        <button type="button" class="btn btn-light tag-indents">django</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 empty"></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h4 class="text-justify">
+                            Best Members
+                        </h4>
+                        <ul class="list-group list-group-flush">
+                            <a class="link" href="#">Mr.Freeman</a>
+                            <a class="link" href="#">Dr.House</a>
+                            <a class="link" href="#">Bender</a>
+                            <a class="link" href="#">Queen Victoria</a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+    <script>
+        let count1 = document.getElementById("buttonCountNumber1");
+        let count2 = document.getElementById("buttonCountNumber2");
+        let count3 = document.getElementById("buttonCountNumber3");
+
+        document.getElementById("question_good-1").onclick = function() {
+            count1.innerHTML++;
+        };
+
+        document.getElementById("question_bad-1").onclick = function() {
+            count1.innerHTML--;
+        };
+
+        document.getElementById("answer_good-1").onclick = function() {
+            count2.innerHTML++;
+        };
+
+        document.getElementById("answer_bad-1").onclick = function() {
+            count2.innerHTML--;
+        };
+
+        document.getElementById("answer_good-2").onclick = function() {
+            count3.innerHTML++;
+        };
+
+        document.getElementById("answer_bad-2").onclick = function() {
+            count3.innerHTML--;
+        };
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+</html>
