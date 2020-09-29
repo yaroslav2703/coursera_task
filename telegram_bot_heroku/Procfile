@@ -1,0 +1,1 @@
+worker: python restoran_helper_bot.py
